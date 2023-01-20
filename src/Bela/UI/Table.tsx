@@ -1,5 +1,6 @@
 import React from 'react';
 import {Game} from "../Logic/Game";
+import PlayerCard from "./PlayerCard";
 function Table() {
 
     let game = new Game();
@@ -8,11 +9,11 @@ function Table() {
         <div>
             Welcome<br />
             player cards:
-        <ul>
+        <div>
             {game.getPlayer().getCards().map((card, index) => {
-                return <li className="card" key={index}>{card.color} - {card.value}</li>
+                return <span className="card" key={index}><PlayerCard value={card.value} color={card.color} /></span>
             })}
-        </ul>
+        </div>
         </div>
     )
 

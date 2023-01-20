@@ -1,4 +1,4 @@
-import {Card, CardColor, CardValue} from "./Card";
+import {Card, CardColor, CardName} from "./Card";
 
 export class Dealer {
 
@@ -12,7 +12,7 @@ export class Dealer {
                 continue;
             }
 
-            for (let value in CardValue) {
+            for (let value in CardName) {
                 if (isNaN(Number(value))) {
                     continue;
                 }

@@ -10,13 +10,13 @@ export class Card{
 }
 
 export enum CardColor {
-    Yellow,
+    Yellow=1,
     Green,
     White,
     Red
 }
 
-export enum CardValue {
+export enum CardName {
     Seven,
     Eight,
     Nine,
