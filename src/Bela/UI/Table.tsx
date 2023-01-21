@@ -1,19 +1,16 @@
 import React from 'react';
-import {Game} from "../Logic/Game";
-import PlayerCard from "./PlayerCard";
+import PlayerCards from "./PlayerCards";
+import {TableLogic} from "../Logic/TableLogic";
 function Table() {
 
-    let game = new Game();
-    game.start();
+    let logic = new TableLogic('Dalibor');
+    logic.currentGame.start();
+
     return (
         <div>
             Welcome<br />
-            player cards:
-        <div>
-            {game.getPlayer().getCards().map((card, index) => {
-                return <span className="card" key={index}><PlayerCard value={card.value} color={card.color} /></span>
-            })}
-        </div>
+            player cards:<br />
+            <PlayerCards cards={logic.currentGame.getPlayer().getCards().cards}></PlayerCards>
         </div>
     )
 

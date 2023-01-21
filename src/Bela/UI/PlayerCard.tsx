@@ -1,10 +1,10 @@
 import React from 'react';
-import {Card} from "../Logic/Card";
+import {Card} from "../Data/Card";
 import {CardHelper} from "../Logic/CardHelper";
-function PlayerCard(props: Card) {
+function PlayerCard(card: Card) {
     let strenthHelper = new CardHelper();
     return(
-    <img style={{float: "left"}} src={'/img/cards/' + props.color + '_' + strenthHelper.getFriendlyNumber(props.value) + '.png'} />
+    <img style={{float: "left"}} src={'/img/cards/' + card.color + '_' + strenthHelper.getFriendlyNumber(card.value) + '.png'} />
     );
 }
 
