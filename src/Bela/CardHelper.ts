@@ -1,4 +1,4 @@
-import {CardName} from "../Data/Card";
+import {CardName} from "../Common/Card";
 
 export class CardHelper {
     public mainColorValues: {[key: number]: number} = {};

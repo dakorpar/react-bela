@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Table from "./Bela/UI/Table";
+import Table from "./Common/UI/Table";
 function App() {
   return (
     <div>

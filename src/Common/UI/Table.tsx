@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayerCards from "./PlayerCards";
-import {TableLogic} from "../Logic/TableLogic";
+import {TableLogic} from "../../Bela/TableLogic";
 function Table() {
 
     let logic = new TableLogic('Dalibor');
@@ -8,9 +8,7 @@ function Table() {
 
     return (
         <div>
-            Welcome<br />
-            player cards:<br />
-            <PlayerCards cards={logic.currentGame.getPlayer().getCards().cards}></PlayerCards>
+            <PlayerCards cards={logic.currentGame.getPlayer().getCards().cards} />
         </div>
     )
 

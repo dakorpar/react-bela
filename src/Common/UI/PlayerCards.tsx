@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayerCard from "./PlayerCard";
-import {Cards} from "../Data/Cards";
+import {Cards} from "../../Common/Cards";
 
 function PlayerCards(props: Cards) {
     return(

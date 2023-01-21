@@ -1,7 +1,7 @@
-import {Card, CardColor, CardName} from "../Data/Card";
-import {Cards} from "../Data/Cards";
+import {Cards} from "./Cards";
+import {Card, CardColor, CardName} from "./Card";
 
-export class DealerLogic {
+export class Dealer {
 
     private cards: Cards = new Cards([]);
 
@@ -22,9 +22,9 @@ export class DealerLogic {
         }
     }
 
-    public dealCards(count:number = 1): Array<Card> {
+    public dealCards(count: number = 1): Array<Card> {
         let cards = new Array<Card>();
-        for(let i=0; i < count; i++) {
+        for (let i = 0; i < count; i++) {
             cards.push(this.cards.cards.splice(Math.floor(Math.random() * this.cards.cards.length), 1)[0]);
         }
 

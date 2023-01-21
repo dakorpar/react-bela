@@ -1,13 +1,13 @@
-import {CardColor} from "../Data/Card";
-import {PlayerLogic} from "./PlayerLogic";
-import {DealerLogic} from "./DealerLogic";
+import {CardColor} from "../Common/Card";
 import {CardHelper} from "./CardHelper";
+import {Dealer} from "../Common/Dealer";
+import {Player} from "../Common/Player";
 
 export class GameLogic {
 
-    private dealer: DealerLogic;
-    private player: PlayerLogic;
-    private computer: PlayerLogic;
+    private dealer: Dealer;
+    private player: Player;
+    private computer: Player;
     private cardStrengthHelper: CardHelper;
     private mainColor: CardColor|null = null;
 
@@ -16,9 +16,9 @@ export class GameLogic {
     public computerScore: number = 0;
 
     constructor() {
-        this.dealer = new DealerLogic();
-        this.player = new PlayerLogic('Dalibor');
-        this.computer = new PlayerLogic('Computer');
+        this.dealer = new Dealer();
+        this.player = new Player('Dalibor');
+        this.computer = new Player('Computer');
         this.cardStrengthHelper = new CardHelper();
     }
 
@@ -31,7 +31,7 @@ export class GameLogic {
         this.computerScore = 0;
     }
 
-    public getPlayer(): PlayerLogic
+    public getPlayer(): Player
     {
         return this.player;
     }
